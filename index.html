@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CricketPulse — Live Cricket News & Scores</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>CricketPulse</h1>
+        <p class="tag">Live scores • News • Fixtures • Stats</p>
+      </div>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#scores">Live Scores</a>
+        <a href="#fixtures">Fixtures</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+      </nav>
+      <button id="themeBtn" class="btn small">Dark</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <h2 id="heroTitle">Live Cricket Updates</h2>
+        <p id="heroSubtitle">Latest match, scorecards and top stories — updated in real time.</p>
+      </div>
+      <div class="hero-right">
+        <div class="score-card" id="featuredScore">
+          <div class="loader">Loading live scores...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Scores -->
+    <section id="scores" class="panel">
+      <h3>Live Matches</h3>
+      <div id="liveList" class="grid"></div>
+    </section>
+
+    <!-- Fixtures -->
+    <section id="fixtures" class="panel">
+      <h3>Upcoming Fixtures</h3>
+      <div id="fixturesList" class="grid"></div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="panel">
+      <div class="panel-head">
+        <h3>Latest Cricket News</h3>
+        <div>
+          <select id="newsSource">
+            <option value="local">Top Cricket</option>
+            <option value="all">All News</option>
+          </select>
+          <button id="refreshNews" class="btn small">Refresh</button>
+        </div>
+      </div>
+      <div id="newsList" class="cards"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="panel">
+      <h3>About CricketPulse</h3>
+      <p>
+        CricketPulse is a lightweight cricket information portal — live scores, fixtures and hand-picked news.
+        This demo uses a public API or mock data if no API key is configured. Use a cricket data provider (SportMonks, Sportradar, RapidAPI) for production.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> CricketPulse. Built by you — powered by APIs.</p>
+      <small>Need help adding live data? See README or ask me.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
